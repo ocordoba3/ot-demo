@@ -1,0 +1,75 @@
+<div class="d-none d-lg-block table_styled">
+    <div class='table_styled-header row'>
+        <div class="col-3">Contractor Name</div>
+        <div class="col-2">Type</div>
+        <div class="col-2">Start Date</div>
+        <div class="col-2">Amount</div>
+        <div class="col-2">Status</div>
+        <div class="col-1 text-center">Actions</div>
+    </div>
+    <div class='table_styled-body'>
+        <div class="row d-flex align-items-center" *ngFor="let item of data">
+            <div class="col-3">
+                <img class='me-3' [src]="item.picture" alt="{{item.name}}"> {{item.name}}
+            </div>
+            <div class="col-2">{{item.type | titlecase}}</div>
+            <div class="col-2">{{item.start_date | date}}</div>
+            <div class="col-2">{{item.amount | currency:"USD":"symbol":'3.0-1'}} USD</div>
+            <div class="col-2">
+                <span class="badge w-100 d-flex justify-content-start align-items-center" [ngClass]="{'badge-success': item.status === 'active', 'badge-warning': item.status !== 'active'}">
+                    <i class="fa-solid fa-circle circle-size me-2"></i> {{item.status | titlecase}}
+                </span>
+            </div>
+            <div class="col-1 text-center">
+                <div class="dropdown-center">
+                    <a class="action_button" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </a>
+                    <ul class="dropdown-menu action_menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square me-3"></i>Edit</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-signature me-2"></i>Sign</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-file-lines me-3"></i>View summary</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can me-3"></i>Delete</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="d-lg-none table_styled-responsive row" *ngFor="let item of data">
+    <div class='col-6 p-0'>
+        <div class="table_styled-column gray-line"><strong>Contractor Name</strong></div>
+        <div class="table_styled-column"><strong>Type</strong></div>
+        <div class="table_styled-column gray-line"><strong>Start Date</strong></div>
+        <div class="table_styled-column"><strong>Amount</strong></div>
+        <div class="table_styled-column gray-line"><strong>Status</strong></div>
+        <div class="table_styled-column"><strong>Actions</strong></div>
+    </div>
+    <div class='col-6 p-0'>
+        <div class="table_styled-column gray-line">{{item.name}}</div>
+        <div class="table_styled-column">{{item.type | titlecase}}</div>
+        <div class="table_styled-column gray-line">{{item.start_date | date}}</div>
+        <div class="table_styled-column">{{item.amount | currency:"USD":"symbol":'3.0-1'}} USD</div>
+        <div class="table_styled-column gray-line">
+            <span class="badge w-100 d-flex justify-content-start align-items-center" [ngClass]="{'badge-success': item.status === 'active', 'badge-warning': item.status !== 'active'}">
+                <i class="fa-solid fa-circle circle-size me-2"></i> {{item.status | titlecase}}
+            </span>
+        </div>
+        <div class="table_styled-column">
+            <div class="dropdown-center">
+                <a class="action_button" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </a>
+                <ul class="dropdown-menu action_menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square me-3"></i>Edit</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-signature me-2"></i>Sign</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-file-lines me-3"></i>View summary</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash-can me-3"></i>Delete</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>

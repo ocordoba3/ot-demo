@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+        <img class='logo' src="assets/images/pink logo.svg" alt="Ontop-Logo">
+        <button class="navbar-toggler menu_button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center align-items-center w-100">
+                <li class="nav-item dropdown" [ngClass]="{'active': item.name === 'Contracts'}" *ngFor="let item of menu_options">
+                    <a class="nav-link d-flex flex-nowrap align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="{{item.icon}} me-2"></i> {{item.name}} <i class="fa-solid fa-chevron-down ms-2"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#" *ngFor="let sub_item of item.sub_items">{{sub_item.name}}</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <div class="dropdown profile_section d-none d-lg-block">
+            <a class="" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/images/profile_pic.svg" alt="Profile-Picture"> <i class="fa-solid fa-chevron-down ms-2 profile-chevron"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">My profile</a></li>
+                <li><a class="dropdown-item" href="#">Log out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

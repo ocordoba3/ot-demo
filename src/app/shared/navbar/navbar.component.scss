@@ -1,0 +1,64 @@
+.bg-white {
+    background-color: #FFFFFF;
+    padding: 0;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+    @media screen and (max-width: 767px) {
+        padding: 10px 20px;
+    }
+}
+
+.container-fluid {
+    padding: 0 40px;
+}
+
+.nav-item {
+    margin: 0 40px;
+    padding: 30px 0;
+    .nav-link {
+        color: #898989;
+        font-size: 18px;
+        font-weight: 700;
+        &:hover {
+            color: #FF5A70;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 10px;
+        width: 100%;
+        text-align: end;
+    }
+}
+
+.profile_section {
+    border-left: 1px solid #C4C4C4;
+    padding: 0 0 0 20px;
+}
+
+.active {
+    border-bottom: 5px solid #FF5A70;
+    .nav-link {
+        color: #FF5A70;
+    }
+}
+
+.fa-chevron-down {
+    font-size: 12px;
+}
+
+.profile-chevron {
+    font-size: 18px;
+    color: #BEBEBE;
+}
+
+.menu_button {
+    background-color: transparent;
+    border: none;
+    color: #FF5A70;
+    font-size: 25px;
+}
+
+.logo {
+    @media screen and (max-width: 767px) {
+        width: 25%;
+    }
+}

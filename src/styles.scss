@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Aileron';
+    src: local('Aileron'), url('assets/font/aileron/Aileron-Regular.otf') format("truetype");
+}
+
+* {
+    box-sizing: border-box;
+    // font-size: 62.5%;
+    margin: 0;
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: 'Aileron', Arial, Helvetica, sans-serif;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+}
+
+.btn-danger {
+    background: #FF5A70;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+}
+
+.btn-secondary {
+    background: #EBEBEB;
+    color: #1C0B11;
+    font-size: 16px;
+}
+
+.badge {
+    border-radius: 20px;
+    font-size: 10px;
+    padding: 7px 10px;
+    @media screen and (max-width: 767px) {
+        padding: 4px 10px;
+    }
+}
+
+.badge-success {
+    background-color: rgba(54, 207, 130, 0.18);
+    color: #36CF82;
+}
+
+.badge-warning {
+    background-color: rgba(242, 157, 66, 0.3);
+    color: #F29D42;
+}
